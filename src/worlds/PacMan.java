@@ -1,9 +1,9 @@
-package Worlds;
+package worlds;
 
-import Main.Game;
-import PacMan.Fruit;
-import PacMan.Ghost;
-import PacMan.Player;
+import engine.main.Game;
+import entity.Fruit;
+import entity.Ghost;
+import entity.Player;
 
 import java.awt.*;
 import java.io.IOException;
@@ -136,7 +136,7 @@ public class PacMan extends Worlds {
     }
 
     private void loadFont() {
-        InputStream is = getClass().getResourceAsStream("/emulogic.ttf");
+        InputStream is = getClass().getResourceAsStream("/fonts/emulogic.ttf");
         try {
             assert is != null;
             pixelFont = Font.createFont(Font.TRUETYPE_FONT, is);

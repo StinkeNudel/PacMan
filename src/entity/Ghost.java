@@ -1,8 +1,8 @@
-package PacMan;
+package entity;
 
-import Input.ImageLoader;
-import Main.Game;
-import Worlds.*;
+import engine.input.ImageLoader;
+import engine.main.Game;
+import worlds.*;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -36,11 +36,11 @@ public class Ghost {
     private boolean blink;
     private int blinkTimer = 0;
     BufferedImage right, left, down, up;
-    BufferedImage eyesUp = ImageLoader.loadImage("/eyesUp.png");
-    BufferedImage eyesLeft = ImageLoader.loadImage("/eyesLeft.png");
-    BufferedImage eyesDown = ImageLoader.loadImage("/eyesDown.png");
-    BufferedImage eyesRight = ImageLoader.loadImage("/eyesRight.png");
-    BufferedImage frightened = ImageLoader.loadImage("/scaredGhost.png");
+    BufferedImage eyesUp = ImageLoader.loadImage("/sprites/ghost/eyesUp.png");
+    BufferedImage eyesLeft = ImageLoader.loadImage("/sprites/ghost/eyesLeft.png");
+    BufferedImage eyesDown = ImageLoader.loadImage("/sprites/ghost/eyesDown.png");
+    BufferedImage eyesRight = ImageLoader.loadImage("/sprites/ghost/eyesRight.png");
+    BufferedImage frightened = ImageLoader.loadImage("/sprites/ghost/scaredGhost.png");
 
     /*
     ====================================================================================================================
@@ -587,31 +587,31 @@ public class Ghost {
         switch (color) {
             //red
             case 2 -> {
-                right = ImageLoader.loadImage("/sprite_03.png");
-                left = ImageLoader.loadImage("/sprite_04.png");
-                down = ImageLoader.loadImage("/sprite_05.png");
-                up = ImageLoader.loadImage("/sprite_06.png");
+                right = ImageLoader.loadImage("/sprites/ghost/sprite_03.png");
+                left = ImageLoader.loadImage("/sprites/ghost/sprite_04.png");
+                down = ImageLoader.loadImage("/sprites/ghost/sprite_05.png");
+                up = ImageLoader.loadImage("/sprites/ghost/sprite_06.png");
             }
             //blue
             case 4 -> {
-                right = ImageLoader.loadImage("/sprite_07.png");
-                left = ImageLoader.loadImage("/sprite_08.png");
-                down = ImageLoader.loadImage("/sprite_09.png");
-                up = ImageLoader.loadImage("/sprite_10.png");
+                right = ImageLoader.loadImage("/sprites/ghost/sprite_07.png");
+                left = ImageLoader.loadImage("/sprites/ghost/sprite_08.png");
+                down = ImageLoader.loadImage("/sprites/ghost/sprite_09.png");
+                up = ImageLoader.loadImage("/sprites/ghost/sprite_10.png");
             }
             //orange
             case 3 -> {
-                right = ImageLoader.loadImage("/sprite_11.png");
-                left = ImageLoader.loadImage("/sprite_12.png");
-                down = ImageLoader.loadImage("/sprite_13.png");
-                up = ImageLoader.loadImage("/sprite_14.png");
+                right = ImageLoader.loadImage("/sprites/ghost/sprite_11.png");
+                left = ImageLoader.loadImage("/sprites/ghost/sprite_12.png");
+                down = ImageLoader.loadImage("/sprites/ghost/sprite_13.png");
+                up = ImageLoader.loadImage("/sprites/ghost/sprite_14.png");
             }
             //pink
             case 1 -> {
-                right = ImageLoader.loadImage("/sprite_15.png");
-                left = ImageLoader.loadImage("/sprite_16.png");
-                down = ImageLoader.loadImage("/sprite_17.png");
-                up = ImageLoader.loadImage("/sprite_18.png");
+                right = ImageLoader.loadImage("/sprites/ghost/sprite_15.png");
+                left = ImageLoader.loadImage("/sprites/ghost/sprite_16.png");
+                down = ImageLoader.loadImage("/sprites/ghost/sprite_17.png");
+                up = ImageLoader.loadImage("/sprites/ghost/sprite_18.png");
             }
         }
     }

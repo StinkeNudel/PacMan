@@ -1,6 +1,6 @@
-package Main;
+package engine.main;
 
-import Input.MouseHandler;
+import engine.input.MouseHandler;
 
 import javax.swing.*;
 import java.awt.*;

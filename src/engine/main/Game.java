@@ -1,7 +1,7 @@
-package Main;
+package engine.main;
 
-import Input.KeyHandler;
-import Worlds.*;
+import engine.input.KeyHandler;
+import worlds.*;
 
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -13,7 +13,7 @@ public class Game{
     public String title; //title of the Window
     boolean running = true;
 
-    //Input
+    //Engine.Input
     private KeyHandler keyHandler;
 
     //Graphical
@@ -28,7 +28,7 @@ public class Game{
      * Constructor
      */
     public Game(){
-        title = "PacMan";
+        title = "entity";
         width = 19 * 38 + 1; //19
         height = 26 * 38 + 1;//26
         init();
@@ -36,13 +36,13 @@ public class Game{
 
     /**
      * initializes:
-     * Input.KeyHandler
+     * Engine.Input.KeyHandler
      * JFrame
      * first World
      */
     private void init(){
         keyHandler = new KeyHandler();
-        display = new Display(title, width, height); //creates Main.Main.Main.Main.Main.Display
+        display = new Display(title, width, height); //creates Engine.Main.Engine.Main.Engine.Main.Engine.Main.Engine.Main.Display
         display.getFrame().addKeyListener(keyHandler); //adds KeyListener
         PacMan world = new PacMan(this);
         Worlds.setWorld(world);

@@ -1,14 +1,14 @@
-package PacMan;
+package entity;
 
-import Input.ImageLoader;
-import Main.Game;
-import Worlds.*;
+import engine.input.ImageLoader;
+import engine.main.Game;
+import worlds.*;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-import static Worlds.PacMan.pixelFont;
+import static worlds.PacMan.pixelFont;
 
 public class Player {
     //general
@@ -22,9 +22,9 @@ public class Player {
     public int direction, nextDirection;
 
     //graphical
-    private final BufferedImage image0 = ImageLoader.loadImage("/PacMan3.png");
-    public final BufferedImage image1 = ImageLoader.loadImage("/PacMan1.png");
-    private final BufferedImage image2 = ImageLoader.loadImage("/PacMan2.png");
+    private final BufferedImage image0 = ImageLoader.loadImage("/sprites/player/PacMan3.png");
+    public final BufferedImage image1 = ImageLoader.loadImage("/sprites/player/PacMan1.png");
+    private final BufferedImage image2 = ImageLoader.loadImage("/sprites/player/PacMan2.png");
     private BufferedImage usedImage0, usedImage1, usedImage2;
     private int animationCount = 0;
     private int animationDelay = 0;

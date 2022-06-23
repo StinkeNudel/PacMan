@@ -1,6 +1,6 @@
-package PacMan;
+package entity;
 
-import Input.ImageLoader;
+import engine.input.ImageLoader;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -22,14 +22,14 @@ public class Fruit {
         this.y = y;
         this.type = type;
         switch (type) {
-            case 0 -> image = ImageLoader.loadImage("/cherry.png");
-            case 1 -> image = ImageLoader.loadImage("/strawberry.png");
-            case 2 -> image = ImageLoader.loadImage("/orange.png");
-            case 3 -> image = ImageLoader.loadImage("/apple.png");
-            case 4 -> image = ImageLoader.loadImage("/melon.png");
-            case 5 -> image = ImageLoader.loadImage("/galaxian.png");
-            case 6 -> image = ImageLoader.loadImage("/bell.png");
-            case 7 -> image = ImageLoader.loadImage("/key.png");
+            case 0 -> image = ImageLoader.loadImage("/sprites/fruit/cherry.png");
+            case 1 -> image = ImageLoader.loadImage("/sprites/fruit/strawberry.png");
+            case 2 -> image = ImageLoader.loadImage("/sprites/fruit/orange.png");
+            case 3 -> image = ImageLoader.loadImage("/sprites/fruit/apple.png");
+            case 4 -> image = ImageLoader.loadImage("/sprites/fruit/melon.png");
+            case 5 -> image = ImageLoader.loadImage("/sprites/fruit/galaxian.png");
+            case 6 -> image = ImageLoader.loadImage("/sprites/fruit/bell.png");
+            case 7 -> image = ImageLoader.loadImage("/sprites/fruit/key.png");
         }
     }
 

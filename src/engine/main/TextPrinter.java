@@ -1,4 +1,4 @@
-package Main;
+package engine.main;
 
 import java.awt.*;
 

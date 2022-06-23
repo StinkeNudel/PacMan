@@ -1,6 +1,6 @@
-package Worlds;
+package worlds;
 
-import Main.Game;
+import engine.main.Game;
 
 import java.awt.*;
 
