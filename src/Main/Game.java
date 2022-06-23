@@ -16,18 +16,21 @@ public class Game{
     //Input
     private KeyHandler keyHandler;
 
+    //Graphical
     private Display display;
 
-
-    //Player
-
+    /*
+    ====================================================================================================================
+    Init Methods
+    ====================================================================================================================
+     */
     /**
      * Constructor
      */
     public Game(){
         title = "PacMan";
-        width = 19 * 38 + 1;
-        height = 26 * 38 + 1;
+        width = 19 * 38 + 1; //19
+        height = 26 * 38 + 1;//26
         init();
     }
 
@@ -45,8 +48,14 @@ public class Game{
         Worlds.setWorld(world);
     }
 
+
+    /*
+    ====================================================================================================================
+    GAME LOOP
+    ====================================================================================================================
+     */
     /**
-     * GAME LOOP
+     * loop
      * frames -> fps
      * ticks -> tps
      */
@@ -88,7 +97,7 @@ public class Game{
 
             if(System.currentTimeMillis() - fpsTpsTimer > 1000){
                 fpsTpsTimer = System.currentTimeMillis();
-                System.out.println("FPS: " + frames + "  TPS: " + ticks);
+                //printStats(frames, ticks);
                 frames = 0;
                 ticks = 0;
             }
@@ -129,6 +138,16 @@ public class Game{
         g.dispose();
     }
 
+    private void printStats(int frames, int ticks){
+        System.out.println("FPS: " + frames + "  TPS: " + ticks);
+    }
+
+
+    /*
+    ====================================================================================================================
+    getter / setter
+    ====================================================================================================================
+     */
     public KeyHandler getKeyHandler(){
         return keyHandler;
     }

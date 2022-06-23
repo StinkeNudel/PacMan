@@ -9,8 +9,14 @@ public class Fruit {
     BufferedImage image;
     private final int x, y;
     private final int size = 32;
-    public final int type; // 0: Cherry | 1: Strawberry | 2: Orange | 3: Apple | 4: Melon | 5: Galaxian | 6: Bell | 7: Key
+    public final int type;
 
+    /**
+     *
+     * @param x X-Cord
+     * @param y Y-Cord
+     * @param type 0: Cherry | 1: Strawberry | 2: Orange | 3: Apple | 4: Melon | 5: Galaxian | 6: Bell | 7: Key
+     */
     public Fruit(int x, int y, int type) {
         this.x = x;
         this.y = y;
@@ -24,11 +30,12 @@ public class Fruit {
             case 5 -> image = ImageLoader.loadImage("/galaxian.png");
             case 6 -> image = ImageLoader.loadImage("/bell.png");
             case 7 -> image = ImageLoader.loadImage("/key.png");
-
-
         }
     }
 
+    /**
+     * @return score of the fruit
+     */
     public int getScore(){
         return switch (type) {
             default -> 0;
@@ -43,10 +50,16 @@ public class Fruit {
         };
     }
 
+    /**
+     * renders the fruit image
+     */
     public void render(Graphics g) {
         g.drawImage(image, x, y, size, size, null);
     }
 
+    /**
+     * @return hit box of fruit
+     */
     public Rectangle getBounds() {
         return new Rectangle(x, y, size, size);
     }

@@ -3,6 +3,18 @@ package Input;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+ * Handles Keyboard inputs
+ * <p>
+ * Example code:
+ * KeyHandler k = new KeyHandler
+ * if(k.w){
+ * ...
+ * }
+ * <p>
+ * to add new Keys: create key boolean and add KeyEvent to tick()
+ */
+
 public class KeyHandler implements KeyListener {
     private final boolean[] keys;
     //all keys

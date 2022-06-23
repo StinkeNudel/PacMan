@@ -11,8 +11,7 @@ public class Display {
     private Canvas canvas; //Canvas
 
     private final String title; //Title of the game
-    private final int width;
-    private final int height; //Size of the game
+    private final int width, height; //Size of the game
 
     /**
      * Constructor
